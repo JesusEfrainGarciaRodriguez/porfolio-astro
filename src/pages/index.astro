@@ -4,12 +4,15 @@ import Layout from "../layouts/Layout.astro";
 import GitHubIcon from "../components/icons/GitHub.astro";
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
 import MailIcon from "../components/icons/Mail.astro";
+import BriefcaseIcon from "../components/icons/Briefcase.astro";
 import SocialPill from "../components/SocialPill.astro";
+import Experience from "../components/Experience.astro";
+import SeccionContainer from "../components/SeccionContainer.astro";
 ---
 
 <Layout title="Portafolio de Efrain Garcia - Desarrollador Web">
   <main>
-    <section class="w-full mx-auto lg:w-[740px] py-44">
+    <SeccionContainer class="pt-44 pb-24">
       <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
         Hey, soy Efrain <a
           href="https://www.linkedin.com/in/efrain-garcia-6a081197/"
@@ -43,6 +46,13 @@ import SocialPill from "../components/SocialPill.astro";
           </SocialPill>
         </li>
       </ul>
-    </section>
+    </SeccionContainer>
+
+    <SeccionContainer id="experiencia">
+      <h2 class="text-2xl font-semibol mb-6 flex gap-x-3 items-center">
+        <BriefcaseIcon class="size-6"/> Experiencia laboral
+      </h2>
+      <Experience />
+    </SeccionContainer>
   </main>
 </Layout>
