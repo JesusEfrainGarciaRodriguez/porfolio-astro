@@ -1,0 +1,39 @@
+---
+import ProjectsItem from "./ProjectsItem.astro";
+const PROJECTS = [
+  {
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Cuesta_del_obispo_01.jpg/800px-Cuesta_del_obispo_01.jpg",
+    title: "Todo App",
+    description: "Una hermosa app para registrar las tareas cotidianas.",
+    pills: [
+      { name: "React", icon: "" },
+      { name: "MongoDB", icon: "" },
+      { name: "Html", icon: "" },
+    ],
+    codeUrl: "",
+    previewUrl: "",
+  },
+  {
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Cuesta_del_obispo_01.jpg/800px-Cuesta_del_obispo_01.jpg",
+    title: "Todo App",
+    description: "Una hermosa app para registrar las tareas cotidianas.",
+    pills: [
+      { name: "React", icon: "" },
+      { name: "MongoDB", icon: "" },
+      { name: "Html", icon: "" },
+    ],
+    codeUrl: "",
+    previewUrl: "",
+  },
+];
+---
+
+<ol>
+  {
+    PROJECTS.map((project) => (
+      <li class="mb-10 ms-4">
+        <ProjectsItem {...project} />
+      </li>
+    ))
+  }
+</ol>
