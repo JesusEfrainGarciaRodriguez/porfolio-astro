@@ -6,12 +6,13 @@ import MailIcon from "../components/icons/Mail.astro";
 import BriefcaseIcon from "../components/icons/Briefcase.astro";
 import SocialPill from "../components/SocialPill.astro";
 import Experience from "../components/Experience.astro";
-import SeccionContainer from "../components/SeccionContainer.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout title="Portafolio de Efrain Garcia - Desarrollador Web">
   <main class="px-4">
-    <SeccionContainer class="py-24 flex items-center gap-x-5">
+    <SectionContainer class="py-24 flex items-center gap-x-5">
       <article class="w-2/4">
         <h6 class="text-white pb-2 text-xl font-bold">Hola, soy</h6>
         <h1
@@ -52,13 +53,20 @@ import SeccionContainer from "../components/SeccionContainer.astro";
           alt="Efrain foto"
         />
       </div>
-    </SeccionContainer>
+    </SectionContainer>
 
-    <SeccionContainer id="experiencia">
+    <SectionContainer id="experiencia">
       <h2 class="text-2xl font-semibol mb-6 flex gap-x-3 items-center">
         <BriefcaseIcon class="size-6" /> Experiencia laboral
       </h2>
       <Experience />
-    </SeccionContainer>
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2 class="text-2xl font-semibol mb-6 flex gap-x-3 items-center">
+        <BriefcaseIcon class="size-6" /> Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
   </main>
 </Layout>
