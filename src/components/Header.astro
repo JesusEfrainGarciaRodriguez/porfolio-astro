@@ -1,6 +1,6 @@
-<header class="py-5 w-full xl:w-[1000px] mx-auto flex justify-center">
+<header id="header" class="py-5 w-full fixed z-50 bg-[#000814]">
   <nav
-    class="fixed z-50 flex flex-row gap-x-10 flex-wrap justify-center border-2 opacity-80 hover:opacity-100 transition rounded-xl p-2 bg-[#000814]"
+    class="xl:w-[1000px] mx-auto flex flex-row flex-wrap gap-x-10 font-semibold"
   >
     <a href="#inicio" class="hover:text-[#ffc300]/90 transition">Inicio</a>
     <a href="#experiencia" class="hover:text-[#ffc300]/90 transition"
@@ -12,3 +12,12 @@
     <a href="#contacto" class="hover:text-[#ffc300]/90 transition">Contacto</a>
   </nav>
 </header>
+
+<script>
+  const header = document.getElementById("header");
+
+  window.addEventListener("scroll", function () {
+    const scrollPosition = document.documentElement.scrollTop;
+    scrollPosition > 0 ? header?.classList.add("border-b") : header?.classList.remove("border-b");
+  });
+</script>
