@@ -4,10 +4,12 @@ import GitHubIcon from "../components/icons/GitHub.astro";
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
 import MailIcon from "../components/icons/Mail.astro";
 import BriefcaseIcon from "../components/icons/Briefcase.astro";
-import SocialPill from "../components/SocialPill.astro";
+import SocialLink from "../components/SocialLink.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Projects from "../components/Projects.astro";
+import imageHero from "../assets/imageHero.png";
+import { Image } from "astro:assets";
 ---
 
 <Layout title="Portafolio de Efrain Garcia - Desarrollador Web">
@@ -26,31 +28,31 @@ import Projects from "../components/Projects.astro";
           Mazatlán, Sinaloa, México.
         </h2>
 
-        <ul class="flex flex-wrap gap-4 mt-8">
+        <ul class="flex flex-wrap gap-4 mt-4">
           <li>
-            <SocialPill
-              href="https://www.linkedin.com/in/efrain-garcia-6a081197/"
-            >
-              <LinkedInIcon class="size-6" />LinkedIn
-            </SocialPill>
+            <SocialLink href="https://www.linkedin.com/in/efrain-garcia-6a081197/">
+              <LinkedInIcon
+                class="size-6 hover:scale-110"
+              />
+            </SocialLink>
           </li>
           <li>
-            <SocialPill href="https://github.com/JesusEfrainGarciaRodriguez">
-              <GitHubIcon class="size-6" />GitHub
-            </SocialPill>
+            <SocialLink href="https://github.com/JesusEfrainGarciaRodriguez">
+              <GitHubIcon class="size-6 hover:scale-110" />
+            </SocialLink>
           </li>
           <li>
-            <SocialPill href="mailto:efraingarcia_86@hotmail.com">
-              <MailIcon class="size-6" />efraingarcia_86@hotmail.com
-            </SocialPill>
+            <SocialLink href="mailto:efraingarcia_86@hotmail.com">
+              <MailIcon class="size-6 hover:scale-110" />
+            </SocialLink>
           </li>
         </ul>
       </article>
       <div class="w-2/4 flex justify-center items-center">
-        <img
-          class="h-[500px]"
-          src="./porfolio-astro/foto.png"
-          alt="Efrain foto"
+        <Image
+          src={imageHero}
+          alt="Efrain Garcia foto"
+          class="h-[500px] w-auto"
         />
       </div>
     </SectionContainer>
