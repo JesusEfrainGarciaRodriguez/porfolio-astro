@@ -1,4 +1,7 @@
-<header id="header" class="py-5 w-full fixed z-50 bg-[#000814]">
+<header
+  id="header"
+  class="py-5 w-full fixed z-50 bg-[#000814] border-blue-900 transition-[border] ease-in"
+>
   <nav
     class="xl:w-[1000px] mx-auto flex flex-row flex-wrap gap-x-10 font-semibold"
   >
@@ -18,6 +21,8 @@
 
   window.addEventListener("scroll", function () {
     const scrollPosition = document.documentElement.scrollTop;
-    scrollPosition > 0 ? header?.classList.add("border-b") : header?.classList.remove("border-b");
+    scrollPosition > 0
+      ? header?.classList.add("border-b-2")
+      : header?.classList.remove("border-b-2");
   });
 </script>

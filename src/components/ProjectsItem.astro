@@ -1,5 +1,5 @@
 ---
-import SocialPill from './SocialPill.astro';
+import SocialLink from './SocialLink.astro';
 interface Icon {
     icon: string,
     name: string
@@ -24,9 +24,9 @@ const { img, title, description, pills, codeUrl, previewUrl } = Astro.props;
         <ol class="flex gap-3 flex-wrap mb-2">
             {pills.map( pill => (
                 <li>
-                    <SocialPill>
+                    <SocialLink>
                         {pill.icon} {pill.name}
-                    </SocialPill>
+                    </SocialLink>
                 </li>
             ))}
         </ol>
