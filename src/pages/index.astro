@@ -2,15 +2,21 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import BriefcaseIcon from "../components/icons/Briefcase.astro";
+import FileCodeIcon from "../components/icons/FileCode.astro";
+import CertificateIcon from "../components/icons/Certificate.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Title from "../components/Title.astro";
 import Projects from "../components/Projects.astro";
+import Certificates from "../components/Certificates.astro";
 ---
 
 <Layout title="Portafolio de Efrain Garcia - Desarrollador Web">
   <main class="px-4">
-    <SectionContainer class="py-28 flex flex-col sm:flex-row items-center gap-x-5">
+    <SectionContainer
+      id="inicio"
+      class="pt-28 pb-16 sm:py-28 flex flex-col sm:flex-row items-center gap-x-5"
+    >
       <Hero />
     </SectionContainer>
 
@@ -23,9 +29,16 @@ import Projects from "../components/Projects.astro";
 
     <SectionContainer id="proyectos">
       <Title>
-        <BriefcaseIcon class="size-6" /> Proyectos
+        <FileCodeIcon class="size-6" /> Proyectos
       </Title>
       <Projects />
+    </SectionContainer>
+
+    <SectionContainer>
+      <Title>
+        <CertificateIcon class="size-6" /> Certificaciones
+      </Title>
+      <Certificates />
     </SectionContainer>
   </main>
 </Layout>
