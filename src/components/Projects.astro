@@ -1,29 +1,41 @@
 ---
 import ProjectsItem from "./ProjectsItem.astro";
+import restauranteImage from "../assets/landing-restaurante.png";
+import rickMortyImage from "../assets/Rick-and-morty-landing.png";
+import todoListImage from "../assets/todo-list.png";
+import memoramaImage from "../assets/memorama.png";
 const PROJECTS = [
   {
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Cuesta_del_obispo_01.jpg/800px-Cuesta_del_obispo_01.jpg",
-    title: "Todo App",
-    description: "Una hermosa app para registrar las tareas cotidianas.",
-    icons: ["React", "Java", "JavaScript"],
-    codeUrl: "asd",
-    previewUrl: "asd",
+    img: todoListImage,
+    title: "Lista de gastos",
+    description: "Lista de gastos para llevar un control financiero.",
+    icons: ["React", "Firebase", "JavaScript"],
+    codeUrl: "https://github.com/JesusEfrainGarciaRodriguez/to_do_list_react",
+    previewUrl: "https://lista-gastos-react-dbd34.firebaseapp.com/",
   },
   {
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Cuesta_del_obispo_01.jpg/800px-Cuesta_del_obispo_01.jpg",
-    title: "Todo App",
-    description: "Una hermosa app para registrar las tareas cotidianas.",
-    icons: ["React", "Java", "JavaScript"],
-    codeUrl: "a",
-    previewUrl: "",
+    img: rickMortyImage,
+    title: "Rick and Morty",
+    description: "Wiki de Rick and Morty consumiendo Api externa.",
+    icons: ["React", "JavaScript"],
+    codeUrl: "https://github.com/JesusEfrainGarciaRodriguez/rick-and-morty",
+    previewUrl: "https://jesusefraingarciarodriguez.github.io/rick-and-morty/",
   },
   {
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Cuesta_del_obispo_01.jpg/800px-Cuesta_del_obispo_01.jpg",
-    title: "Todo App",
-    description: "Una hermosa app para registrar las tareas cotidianas.",
-    icons: ["React", "Java", "JavaScript"],
-    codeUrl: "",
-    previewUrl: "a",
+    img: restauranteImage,
+    title: "Restaurante",
+    description: "Landing Page promocional de un local especializado en hot cakes.",
+    icons: ["JavaScript", "HTML", "Sass"],
+    codeUrl: "https://github.com/JesusEfrainGarciaRodriguez/Restaurante",
+    previewUrl: "https://jesusefraingarciarodriguez.github.io/Restaurante/",
+  },
+  {
+    img: memoramaImage,
+    title: "Memorama",
+    description: "Recreación del juego memora con temática de Marvel.",
+    icons: ["JavaScript", "HTML", "CSS"],
+    codeUrl: "https://github.com/JesusEfrainGarciaRodriguez/Memorama",
+    previewUrl: "https://jesusefraingarciarodriguez.github.io/Memorama/",
   },
 ];
 ---
