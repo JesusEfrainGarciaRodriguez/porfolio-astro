@@ -2,6 +2,8 @@
 import GitHubIcon from "../components/icons/GitHub.astro";
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
 import MailIcon from "../components/icons/Mail.astro";
+import PhoneIcon from "../components/icons/Phone.astro";
+import CvIcon from "../components/icons/Cv.astro";
 import SocialLink from "../components/SocialLink.astro";
 import imageHero from "../assets/imageHero.png";
 import { Image } from "astro:assets";
@@ -20,7 +22,7 @@ import { Image } from "astro:assets";
     Sinaloa, México.
   </h2>
 
-  <ul class="flex flex-wrap gap-4 mt-4">
+  <ul class="flex flex-wrap items-center gap-4 mt-4">
     <li>
       <SocialLink href="https://www.linkedin.com/in/efrain-garcia-6a081197/">
         <LinkedInIcon class="size-6 hover:scale-110" />
@@ -34,6 +36,18 @@ import { Image } from "astro:assets";
     <li>
       <SocialLink href="mailto:efraingarcia_86@hotmail.com">
         <MailIcon class="size-6 hover:scale-110" />
+      </SocialLink>
+    </li>
+    <li>
+      <SocialLink href="tel:6694415732">
+        <PhoneIcon class="size-6 hover:scale-110" />
+      </SocialLink>
+    </li>
+    <li>
+      <SocialLink
+        href="https://drive.google.com/file/d/1O2huJkdzIz1-rd_BaXXUTynWFQ6XGDnC/view?usp=sharing"
+      >
+        <CvIcon class="size-6 hover:scale-110"  />
       </SocialLink>
     </li>
   </ul>
