@@ -1,40 +1,48 @@
 ---
-import SocialLink from './SocialLink.astro';
-interface Icon {
-    icon: string,
-    name: string
-}
+import ReactIcon from "../components/icons/React.astro";
+import JavaIcon from "../components/icons/Java.astro";
+import JavaScriptIcon from "../components/icons/JavaScript.astro";
+import Button from "../components/Button.astro";
 interface Props {
   img: string;
   title: string;
   description: string;
-  pills: Icon[];
+  icons: string[];
   codeUrl?: string;
   previewUrl?: string;
 }
-const { img, title, description, pills, codeUrl, previewUrl } = Astro.props;
+const { img, title, description, icons, codeUrl, previewUrl } = Astro.props;
 ---
 
-<article class="flex gap-x-8">
-    <img src={img} alt={title} class="w-1/2 h-[200px] rounded-lg">
-    <div class="w-1/2">
-        <h3 class="text-3xl font-bold mb-2">{title}</h3>
-        <p class="text-base font-normal opacity-80 max-w-[500px] text-pretty mb-2">{description}</p>
+<article class="flex flex-col gap-1">
+  <img src={img} alt={title} class="max-h-[200px] rounded-lg object-fill" />
+  <div>
+    <h3 class="text-2xl font-bold text-[#ffc300]/90 mb-1">{title}</h3>
+    <p class="text-base font-normal opacity-80 max-w-[500px] text-pretty mb-2">
+      {description}
+    </p>
 
-        <ol class="flex gap-3 flex-wrap mb-2">
-            {pills.map( pill => (
-                <li>
-                    <SocialLink>
-                        {pill.icon} {pill.name}
-                    </SocialLink>
-                </li>
-            ))}
-        </ol>
+    <ol class="flex gap-3 flex-wrap mb-4">
+      {
+        icons.map((icon) => (
+          <li>
+            {icon === "React" ? (
+              <ReactIcon class="size-5" />
+            ) : icon === "Java" ? (
+              <JavaIcon class="size-5" />
+            ) : icon === "JavaScript" ? (
+              <JavaScriptIcon class="size-5" />
+            ) : (
+              ""
+            )}
+          </li>
+        ))
+      }
+    </ol>
 
-        <div>
-            <a href={codeUrl} class="inline-block border rounded-lg px-2 py-1 bg-white text-black font-semibold">Ver código</a>
-            <a href={previewUrl} class="inline-block border rounded-lg px-2 py-1 bg-white text-black font-semibold">Ir al sitio</a>
-        </div>
-        
+    <div class="flex gap-x-2">
+      {codeUrl && <Button href={codeUrl} variant="secondary">Ver código</Button>}
+      {previewUrl && <Button href={previewUrl}>Ir al sitio</Button>}
     </div>
+  </div>
 </article>
