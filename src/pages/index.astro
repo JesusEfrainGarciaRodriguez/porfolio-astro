@@ -7,6 +7,7 @@ import BriefcaseIcon from "../components/icons/Briefcase.astro";
 import SocialLink from "../components/SocialLink.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
+import Title from "../components/Title.astro";
 import Projects from "../components/Projects.astro";
 import imageHero from "../assets/imageHero.png";
 import { Image } from "astro:assets";
@@ -30,10 +31,10 @@ import { Image } from "astro:assets";
 
         <ul class="flex flex-wrap gap-4 mt-4">
           <li>
-            <SocialLink href="https://www.linkedin.com/in/efrain-garcia-6a081197/">
-              <LinkedInIcon
-                class="size-6 hover:scale-110"
-              />
+            <SocialLink
+              href="https://www.linkedin.com/in/efrain-garcia-6a081197/"
+            >
+              <LinkedInIcon class="size-6 hover:scale-110" />
             </SocialLink>
           </li>
           <li>
@@ -58,16 +59,16 @@ import { Image } from "astro:assets";
     </SectionContainer>
 
     <SectionContainer id="experiencia">
-      <h2 class="text-2xl font-semibol mb-6 flex gap-x-3 items-center">
+      <Title>
         <BriefcaseIcon class="size-6" /> Experiencia laboral
-      </h2>
+      </Title>
       <Experience />
     </SectionContainer>
 
     <SectionContainer id="proyectos">
-      <h2 class="text-2xl font-semibol mb-6 flex gap-x-3 items-center">
+      <Title>
         <BriefcaseIcon class="size-6" /> Proyectos
-      </h2>
+      </Title>
       <Projects />
     </SectionContainer>
   </main>
