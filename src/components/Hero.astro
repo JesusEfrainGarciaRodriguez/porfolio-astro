@@ -59,7 +59,10 @@ import { Image } from "astro:assets";
     </li>
   </ul>
 </article>
-<div class="sm:w-2/4 flex justify-center items-center">
+
+<div
+  class="sm:w-2/4 flex justify-center items-center relative after:content-[''] after:left-0 after:right-0 after:h-full after:absolute after:bg-gradient-border"
+>
   <Image
     src={imageHero}
     alt="Efrain Garcia foto"
