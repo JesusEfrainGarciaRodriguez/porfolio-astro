@@ -1,0 +1,43 @@
+---
+import GitHubIcon from "../components/icons/GitHub.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import SocialLink from "../components/SocialLink.astro";
+import imageHero from "../assets/imageHero.png";
+import { Image } from "astro:assets";
+---
+
+<article class="sm:w-2/4">
+  <h6 class="text-white pb-2 text-xl font-bold">Hola, soy</h6>
+  <h1
+    class="text-white text-3xl lg:text-5xl font-bold flex flex-col flex-wrap pb-3"
+  >
+    <span class="text-[#ffc300]/90 mb-1 sm:mb-4">Efrain Garcia</span>
+    <span>Web Developer</span>
+  </h1>
+  <h2 class="text-lg lg:text-xl opacity-80 max-w-[500px] text-balance">
+    +2 años de experiencia. Especializado en aplicaciones web. De Mazatlán,
+    Sinaloa, México.
+  </h2>
+
+  <ul class="flex flex-wrap gap-4 mt-4">
+    <li>
+      <SocialLink href="https://www.linkedin.com/in/efrain-garcia-6a081197/">
+        <LinkedInIcon class="size-6 hover:scale-110" />
+      </SocialLink>
+    </li>
+    <li>
+      <SocialLink href="https://github.com/JesusEfrainGarciaRodriguez">
+        <GitHubIcon class="size-6 hover:scale-110" />
+      </SocialLink>
+    </li>
+    <li>
+      <SocialLink href="mailto:efraingarcia_86@hotmail.com">
+        <MailIcon class="size-6 hover:scale-110" />
+      </SocialLink>
+    </li>
+  </ul>
+</article>
+<div class="sm:w-2/4 flex justify-center items-center">
+  <Image src={imageHero} alt="Efrain Garcia foto" class="h-[300px] sm:h-[500px] w-auto" />
+</div>

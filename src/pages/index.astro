@@ -1,61 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import GitHubIcon from "../components/icons/GitHub.astro";
-import LinkedInIcon from "../components/icons/LinkedIn.astro";
-import MailIcon from "../components/icons/Mail.astro";
+import Hero from "../components/Hero.astro";
 import BriefcaseIcon from "../components/icons/Briefcase.astro";
-import SocialLink from "../components/SocialLink.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Title from "../components/Title.astro";
 import Projects from "../components/Projects.astro";
-import imageHero from "../assets/imageHero.png";
-import { Image } from "astro:assets";
 ---
 
 <Layout title="Portafolio de Efrain Garcia - Desarrollador Web">
   <main class="px-4">
-    <SectionContainer class="py-24 flex items-center gap-x-5">
-      <article class="w-2/4">
-        <h6 class="text-white pb-2 text-xl font-bold">Hola, soy</h6>
-        <h1
-          class="text-white text-3xl lg:text-5xl font-bold flex flex-col flex-wrap gap-4 pb-5"
-        >
-          <span class="text-[#ffc300]/90">Efrain Garcia</span>
-          <span>Web Developer</span>
-        </h1>
-        <h2 class="text-xl lg:text-xl opacity-80 max-w-[500px] text-balance">
-          +2 años de experiencia. Especializado en aplicaciones web. De
-          Mazatlán, Sinaloa, México.
-        </h2>
-
-        <ul class="flex flex-wrap gap-4 mt-4">
-          <li>
-            <SocialLink
-              href="https://www.linkedin.com/in/efrain-garcia-6a081197/"
-            >
-              <LinkedInIcon class="size-6 hover:scale-110" />
-            </SocialLink>
-          </li>
-          <li>
-            <SocialLink href="https://github.com/JesusEfrainGarciaRodriguez">
-              <GitHubIcon class="size-6 hover:scale-110" />
-            </SocialLink>
-          </li>
-          <li>
-            <SocialLink href="mailto:efraingarcia_86@hotmail.com">
-              <MailIcon class="size-6 hover:scale-110" />
-            </SocialLink>
-          </li>
-        </ul>
-      </article>
-      <div class="w-2/4 flex justify-center items-center">
-        <Image
-          src={imageHero}
-          alt="Efrain Garcia foto"
-          class="h-[500px] w-auto"
-        />
-      </div>
+    <SectionContainer class="py-28 flex flex-col sm:flex-row items-center gap-x-5">
+      <Hero />
     </SectionContainer>
 
     <SectionContainer id="experiencia">
