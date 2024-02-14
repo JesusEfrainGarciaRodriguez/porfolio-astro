@@ -1,3 +1,8 @@
+---
+import { t } from "i18next";
+import { LanguageSelector } from "astro-i18next/components";
+---
+
 <header
   id="header"
   class="py-5 w-full fixed z-50 bg-[#000814] border-blue-900 transition-[border] ease-in"
@@ -5,14 +10,30 @@
   <nav
     class="xl:w-[1000px] mx-auto flex flex-row justify-center sm:justify-normal flex-wrap gap-x-10 gap-y-2 px-5 sm:px-0 font-semibold"
   >
-    <a href="#inicio" class="hover:text-[#ffc300]/90 transition">Inicio</a>
-    <a href="#experiencia" class="hover:text-[#ffc300]/90 transition"
-      >Experiencia</a
+    <a
+      href=`#${t("header.navbar.homeLink")}`
+      class="hover:text-[#ffc300]/90 transition">{t("header.navbar.home")}</a
     >
-    <a href="#proyectos" class="hover:text-[#ffc300]/90 transition">Proyectos</a
+    <a
+      href=`#${t("header.navbar.experienceLink")}`
+      class="hover:text-[#ffc300]/90 transition"
+      >{t("header.navbar.experience")}</a
     >
-    <a href="#certificaciones" class="hover:text-[#ffc300]/90 transition">Certificaciones</a>
-    <a href="#sobre-mi" class="hover:text-[#ffc300]/90 transition">Sobre mí</a>
+    <a
+      href=`#${t("header.navbar.projectsLink")}`
+      class="hover:text-[#ffc300]/90 transition"
+      >{t("header.navbar.projects")}</a
+    >
+    <a
+      href=`#${t("header.navbar.certificationsLink")}`
+      class="hover:text-[#ffc300]/90 transition"
+      >{t("header.navbar.certifications")}</a
+    >
+    <a
+      href=`#${t("header.navbar.aboutMeLink")}`
+      class="hover:text-[#ffc300]/90 transition">{t("header.navbar.aboutMe")}</a
+    >
+    <LanguageSelector />
   </nav>
 </header>
 

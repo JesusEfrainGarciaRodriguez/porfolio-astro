@@ -1,0 +1,20 @@
+{
+    "site": {
+        "title": "Portafolio de Efrain Garcia - Desarrollador Web",
+        "description": "Portafolio de Efrain Garcia - Desarrollador Web"
+    },
+    "header": {
+        "navbar": {
+            "home": "Inicio",
+            "homeLink": "inicio",
+            "experience": "Experiencia",
+            "experienceLink": "experiencia",
+            "projects": "Proyectos",
+            "projectsLink": "proyectos",
+            "certifications": "Certificaciones",
+            "certificationsLink": "certificaciones",
+            "aboutMe": "Sobre mí",
+            "aboutMeLink": "sobre-mi"
+        }
+    }
+}
