@@ -1,0 +1,28 @@
+{
+  "experiences": [
+    {
+      "date": "March 2023 – Present",
+      "company": "Solemti",
+      "title": "Front-End Developer | ReactJS",
+      "description": "Migration of a website developed with HCL Commerce v8, Java, JSP, JQuery to HCL Commerce v9.1 with frontend technologies such as ReactJS, Redux, JavaScript, TypeScript, HTML, CSS, Git. In turn, assigned to the support area."
+    },
+    {
+      "date": "August 2022 – April 2023",
+      "company": "Solemti",
+      "title": "Web Developer",
+      "description": "Web developer with HCL Commerce v8 using Rational (RAD), Management center, Jquery, Javascript, Less, CSS, HTML, Java, DB2, SonarQube, SonarScanner, CheckMarx, Git, Azure boards, Jira, Scrum."
+    },
+    {
+      "date": "September – December 2021",
+      "company": "Solemti",
+      "title": "Full-Stack Developer",
+      "description": "Web developer with AngularJS and NodeJS."
+    },
+    {
+      "date": "September 2020 – May 2021",
+      "company": "RED Nacional de Actividades Juveniles en Ciencia y Tecnología",
+      "title": "Full-Stack Developer",
+      "description": "Reengineered Java based desktop application to a Web system using Angular12, Python with Django / Django Rest Framework and MySQL."
+    }
+  ]
+}
