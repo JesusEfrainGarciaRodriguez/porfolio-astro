@@ -1,34 +1,18 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
+import { t } from "i18next";
 
-const EXPERIENCE = [
-  {
-    date: "Marzo 2023 – Actualidad",
-    company: "Solemti",
-    title: "Front-End Developer | ReactJS",
-    description: `Migración de sitio web desarrollado con HCL Commerce v8, Java, JSP, JQuery a HCL Commerce v9.1 con tecnologías frontend como ReactJS, Redux, JavaScript, TypeScript, HTML, CSS, Git. A su vez, asignado al área de soporte para atender problemas y fallos.`,
-  },
-  {
-    date: "Agosto 2022 – Abril 2023",
-    company: "Solemti",
-    title: "Web Developer",
-    description:
-      "Desarrollador web con HCL Commerce v8 usando Rational (RAD), Management center, Jquery, Javascript, Less, CSS, HTML, Java, DB2, SonarQube, SonarScanner, CheckMarx, Git, Azure boards, Jira, Scrum.",
-  },
-  {
-    date: "Septiembre – Diciembre 2021",
-    company: "Solemti",
-    title: "Full-Stack Developer",
-    description: "Desarrollador web con AngularJS y NodeJS.",
-  },
-  {
-    date: "Septiembre 2020 – Mayo 2021",
-    company: "RED Nacional de Actividades Juveniles en Ciencia y Tecnología",
-    title: "Full-Stack Developer",
-    description:
-      "Reingeniería de aplicación de escritorio basada en Java a un sistema Web usando Angular12, Python con Django / Django Rest Framework y MySQL.",
-  },
-];
+interface IExperience {
+  date: string;
+  company: string;
+  title: string;
+  description: string;
+}
+
+const EXPERIENCE: Array<IExperience> = t("experiences", {
+  returnObjects: true,
+  ns: "experience"
+});
 ---
 
 <ol class="relative border-s border-gray-200/10 ml-3">
