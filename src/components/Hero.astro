@@ -7,19 +7,19 @@ import CvIcon from "../components/icons/Cv.astro";
 import SocialLink from "../components/SocialLink.astro";
 import imageHero from "../assets/imageHero.png";
 import { Image } from "astro:assets";
+import { t } from "i18next";
 ---
 
 <article class="sm:w-2/4">
-  <h6 class="text-white pb-2 text-xl font-bold">Hola, soy</h6>
+  <h6 class="text-white pb-2 text-xl font-bold">{t("hero.hiIam")}</h6>
   <h1
     class="text-white text-3xl lg:text-5xl font-bold flex flex-col flex-wrap pb-3"
   >
-    <span class="text-[#ffc300]/90 mb-1 sm:mb-4">Efrain Garcia</span>
-    <span>Web Developer</span>
+    <span class="text-[#ffc300]/90 mb-1 sm:mb-4">{t("hero.name")}</span>
+    <span>{t("hero.position")}</span>
   </h1>
   <h2 class="text-lg lg:text-xl opacity-80 max-w-[500px] text-balance">
-    +2 años de experiencia. Especializado en aplicaciones web. De Mazatlán,
-    Sinaloa, México.
+    {t("hero.description")}
   </h2>
 
   <ul class="flex flex-wrap items-center gap-4 mt-4">
@@ -40,19 +40,19 @@ import { Image } from "astro:assets";
       </SocialLink>
     </li>
     <li>
-      <SocialLink href="mailto:efraingarcia_86@hotmail.com" aria-label="Correo">
+      <SocialLink href="mailto:efraingarcia_86@hotmail.com" aria-label={t("hero.mail")}>
         <MailIcon class="size-6 hover:scale-110" />
       </SocialLink>
     </li>
     <li>
-      <SocialLink href="tel:6694415732" aria-label="Teléfono">
+      <SocialLink href="tel:6694415732" aria-label={t("hero.phone")}>
         <PhoneIcon class="size-6 hover:scale-110" />
       </SocialLink>
     </li>
     <li>
       <SocialLink
         href="https://drive.google.com/file/d/1O2huJkdzIz1-rd_BaXXUTynWFQ6XGDnC/view?usp=sharing"
-        aria-label="Descargar CV"
+        aria-label={t("hero.downloadCV")}
       >
         <CvIcon class="size-6 hover:scale-110" />
       </SocialLink>
@@ -65,7 +65,7 @@ import { Image } from "astro:assets";
 >
   <Image
     src={imageHero}
-    alt="Efrain Garcia foto"
+    alt=`${t("hero.name")} ${t("hero.downloadCV")}`
     class="h-[300px] sm:h-[500px] w-auto"
   />
 </div>

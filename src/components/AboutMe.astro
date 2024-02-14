@@ -1,6 +1,7 @@
 ---
 import imageAboutMe from "../assets/image-about-me.png";
 import { Image } from "astro:assets";
+import { t } from "i18next";
 ---
 
 <article class="flex justify-center items-center flex-col sm:flex-row gap-10 mb-10">
@@ -10,9 +11,8 @@ import { Image } from "astro:assets";
     class="size-[200px] object-contain bg-blue-900 border-2 border-white rounded-full"
   />
   <p class="text-pretty max-w-[500px]">
-    <span class="text-[#ffc300]/90 font-semibold">Ing. en Tecnologías de la información</span>, con un gran interés en el Desarrollo
-    Web y más de 2 años de experiencia. Con capacidad para aprender y aplicar
-    mis conocimientos al ámbito profesional. En busca de una oportunidad laboral
-    en la que desarrollar mis habilidades y adquirir experiencia.
+    <span class="text-[#ffc300]/90 font-semibold"
+      >{t("aboutMe.description1")}</span
+    >{t("aboutMe.description2")}
   </p>
 </article>
