@@ -16,5 +16,32 @@
             "aboutMe": "About me",
             "aboutMeLink": "aboutMe"
         }
+    },
+    "hero": {
+        "hiIam": "Hi, I'm",
+        "name": "Efrain Garcia",
+        "position": "Web Developer",
+        "description": "+2 years of experience. Specialized in web applications. From Mazatlán, Sinaloa, Mexico.",
+        "mail": "Mail",
+        "phone": "Phone",
+        "downloadCV": "Download CV",
+        "img": "image"
+    },
+    "experience": {
+        "title": "Work experience"
+    },
+    "projects": {
+        "title": "Projects",
+        "goToCode": "Code",
+        "goToSite": "Go to site",
+        "img": "image"
+    },
+    "certifications": {
+        "title": "Certifications"
+    },
+    "aboutMe": {
+        "title": "About me",
+        "description1": "Information Technology Engineer",
+        "description2": ", with a great interest in Web Development and more than 2 years of experience. With the ability to learn and apply my knowledge to the professional field. Looking for a job opportunity to develop my skills and gain experience."
     }
 }

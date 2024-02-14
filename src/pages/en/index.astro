@@ -18,36 +18,40 @@ changeLanguage("en");
 <Layout title={t("site.title")} description={t("site.description")}>
   <main class="px-4">
     <SectionContainer
-      id="inicio"
+      id={t("header.navbar.homeLink")}
       class="pt-28 pb-16 sm:py-28 flex flex-col sm:flex-row items-center gap-5"
     >
       <Hero />
     </SectionContainer>
 
-    <SectionContainer id="experiencia">
+    <SectionContainer id={t("header.navbar.experienceLink")}>
       <Title>
-        <BriefcaseIcon class="size-6" /> Experiencia laboral
+        <BriefcaseIcon class="size-6" />
+        {t("experience.title")}
       </Title>
       <Experience />
     </SectionContainer>
 
-    <SectionContainer id="proyectos">
+    <SectionContainer id={t("header.navbar.projectsLink")}>
       <Title>
-        <FileCodeIcon class="size-6" /> Proyectos
+        <FileCodeIcon class="size-6" />
+        {t("projects.title")}
       </Title>
       <Projects />
     </SectionContainer>
 
-    <SectionContainer id="certificaciones">
+    <SectionContainer id={t("header.navbar.certificationsLink")}>
       <Title>
-        <CertificateIcon class="size-6" /> Certificaciones
+        <CertificateIcon class="size-6" />
+        {t("certifications.title")}
       </Title>
       <Certificates />
     </SectionContainer>
 
-    <SectionContainer id="sobre-mi">
+    <SectionContainer id={t("header.navbar.aboutMeLink")}>
       <Title>
-        <CertificateIcon class="size-6" /> Sobre mí
+        <CertificateIcon class="size-6" />
+        {t("aboutMe.title")}
       </Title>
       <AboutMe />
     </SectionContainer>

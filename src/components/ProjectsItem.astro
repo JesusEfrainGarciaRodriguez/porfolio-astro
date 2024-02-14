@@ -7,6 +7,7 @@ import CssIcon from "../components/icons/Css.astro";
 import SassIcon from "../components/icons/Sass.astro";
 import Button from "../components/Button.astro";
 import { Image } from "astro:assets";
+import { t } from "i18next";
 interface Props {
   img: ImageMetadata;
   title: string;
@@ -21,7 +22,7 @@ const { img, title, description, icons, codeUrl, previewUrl } = Astro.props;
 <article class="flex flex-col gap-1">
   <Image
     src={img}
-    alt={`${title} imagen`}
+    alt={`${title} ${t("projects.img")}`}
     class="h-[150px] rounded-lg object-cover"
   />
   <div>
@@ -58,11 +59,15 @@ const { img, title, description, icons, codeUrl, previewUrl } = Astro.props;
       {
         codeUrl && (
           <Button href={codeUrl} variant="secondary">
-            Ver código
+            {t("projects.goToCode")}
           </Button>
         )
       }
-      {previewUrl && <Button href={previewUrl}>Ir al sitio</Button>}
+      {
+        previewUrl && (
+          <Button href={previewUrl}>{t("projects.goToSite")}</Button>
+        )
+      }
     </div>
   </div>
 </article>

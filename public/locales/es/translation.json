@@ -16,5 +16,32 @@
             "aboutMe": "Sobre mí",
             "aboutMeLink": "sobre-mi"
         }
+    },
+    "hero": {
+        "hiIam": "Hola, soy",
+        "name": "Efrain Garcia",
+        "position": "Web Developer",
+        "description": "+2 años de experiencia. Especializado en aplicaciones web. De Mazatlán, Sinaloa, México.",
+        "mail": "Correo",
+        "phone": "Teléfono",
+        "downloadCV": "Descargar CV",
+        "img": "foto"
+    },
+    "experience": {
+        "title": "Experiencia laboral"
+    },
+    "projects": {
+        "title": "Proyectos",
+        "goToCode": "Ver código",
+        "goToSite": "Ir al sitio",
+        "img": "imagen"
+    },
+    "certifications": {
+        "title": "Certificaciones"
+    },
+    "aboutMe": {
+        "title": "Sobre mí",
+        "description1": "Ing. en Tecnologías de la información",
+        "description2": ", con un gran interés en el Desarrollo Web y más de 2 años de experiencia. Con capacidad para aprender y aplicar mis conocimientos al ámbito profesional. En busca de una oportunidad laboral en la que desarrollar mis habilidades y adquirir experiencia."
     }
 }
