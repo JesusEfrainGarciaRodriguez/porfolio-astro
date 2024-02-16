@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import ExternalLinkIcon from "../components/icons/ExternalLink.astro";
 interface Props {
-  img: ImageMetadata;
+  img: string;
   title: string;
   date: string;
   url: string;
@@ -17,7 +17,11 @@ const { img, title, date, url } = Astro.props;
   class="flex justify-between items-center flex-col sm:flex-row gap-2 p-3 border-2 border-blue-900 rounded-lg transition hover:border-[#ffc300]/90 cursor-pointer"
 >
   <div class="flex gap-5 flex-col sm:flex-row items-center">
-    <Image src={img} alt={`${title} imagen`} class="size-16 object-cover" />
+    <Image
+      src={import(`../assets/${img}.webp`)}
+      alt={`${title} imagen`}
+      class="size-16 object-cover"
+    />
     <div class="flex flex-col">
       <h3 class="text-lg font-bold text-[#ffc300]/90">{title}</h3>
       <time class="text-base font-normal opacity-80">{date}</time>

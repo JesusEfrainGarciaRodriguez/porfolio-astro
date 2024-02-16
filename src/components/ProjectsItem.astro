@@ -21,11 +21,9 @@ const { img, title, description, icons, codeUrl, previewUrl } = Astro.props;
 
 <article class="flex flex-col gap-1">
   <Image
-    src={img}
+    src={import(`../assets/${img}.webp`)}
     alt={`${title} ${t("projects.img")}`}
     class="h-[150px] rounded-lg object-cover"
-    width="315"
-    height="150"
   />
   <div>
     <h3 class="text-xl font-bold text-[#ffc300]/90 mb-1">{title}</h3>

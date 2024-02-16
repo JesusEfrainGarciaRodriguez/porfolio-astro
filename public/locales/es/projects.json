@@ -1,7 +1,7 @@
 {
     "projects": [
         {
-            "img": "https://i.ibb.co/SNp3WTV/todo-list.webp",
+            "img": "todo-list",
             "title": "Lista de gastos",
             "description": "Lista de gastos para llevar un control financiero.",
             "icons": [
@@ -13,7 +13,7 @@
             "previewUrl": "https://lista-gastos-react-dbd34.firebaseapp.com/"
         },
         {
-            "img": "https://i.ibb.co/JQQzPjC/Rick-and-morty-landing.webp",
+            "img": "Rick-and-morty-landing",
             "title": "Rick and Morty",
             "description": "Wiki de Rick and Morty consumiendo Api externa.",
             "icons": [
@@ -24,7 +24,7 @@
             "previewUrl": "https://jesusefraingarciarodriguez.github.io/rick-and-morty/"
         },
         {
-            "img": "https://i.ibb.co/tBmY3Ng/landing-restaurante.webp",
+            "img": "landing-restaurante",
             "title": "Restaurante",
             "description": "Landing Page promocional de un local especializado en hot cakes.",
             "icons": [
@@ -36,7 +36,7 @@
             "previewUrl": "https://jesusefraingarciarodriguez.github.io/Restaurante/"
         },
         {
-            "img": "https://i.ibb.co/PtjZgcs/memorama.webp",
+            "img": "memorama",
             "title": "Memorama",
             "description": "Recreación del juego memora con temática de Marvel.",
             "icons": [
