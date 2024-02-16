@@ -9,7 +9,7 @@ import Button from "../components/Button.astro";
 import { Image } from "astro:assets";
 import { t } from "i18next";
 interface Props {
-  img: ImageMetadata;
+  img: string;
   title: string;
   description: string;
   icons: string[];
@@ -24,6 +24,8 @@ const { img, title, description, icons, codeUrl, previewUrl } = Astro.props;
     src={img}
     alt={`${title} ${t("projects.img")}`}
     class="h-[150px] rounded-lg object-cover"
+    width="315"
+    height="150"
   />
   <div>
     <h3 class="text-xl font-bold text-[#ffc300]/90 mb-1">{title}</h3>
