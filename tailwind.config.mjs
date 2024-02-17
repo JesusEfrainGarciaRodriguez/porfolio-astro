@@ -8,6 +8,9 @@ export default {
         "gradient-border":
           "linear-gradient(0deg, rgba(0,8,20,1) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,0) 98%, rgba(0,8,20,1) 100%)",
       },
+      colors: {
+        "dark": "#000814"
+      }
     },
   },
   plugins: [],
