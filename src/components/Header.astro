@@ -6,10 +6,10 @@ import HamburgerIcon from "./icons/Hamburger.astro";
 
 <header
   id="header"
-  class="py-3 sm:py-5 w-full fixed z-50 bg-dark border-blue-900 transition-[border] ease-in"
+  class="py-4 sm:py-5 w-full fixed z-50 bg-dark border-blue-900 transition-[border] ease-in"
 >
   <button id="hamburger-button" class="sm:hidden w-full px-4 flex items-center"
-    ><HamburgerIcon class="size-7" /></button
+    ><HamburgerIcon class="size-8" /></button
   >
   <nav
     class="xl:w-[1000px] mx-auto flex flex-col sm:flex-row items-center justify-center sm:justify-normal flex-nowrap gap-x-10 gap-y-4 sm:gap-y-2 px-5 sm:px-0 font-semibold max-h-0 overflow-hidden sm:max-h-full transition-all"
@@ -46,7 +46,7 @@ import HamburgerIcon from "./icons/Hamburger.astro";
   const nav = header?.querySelector("nav");
 
   window.addEventListener("scroll", function () {
-    const navMobileOpen = nav?.classList.contains("max-h-[225px]");
+    const navMobileOpen = nav?.classList.contains("max-h-[230px]");
     if(navMobileOpen) return;
     
     const scrollPosition = document.documentElement.scrollTop;
@@ -57,7 +57,7 @@ import HamburgerIcon from "./icons/Hamburger.astro";
 
   const hamburgerButton = document.getElementById("hamburger-button");
   hamburgerButton?.addEventListener("click", () => {
-    const hasClass = nav?.classList.toggle("max-h-[225px]");
+    const hasClass = nav?.classList.toggle("max-h-[230px]");
     if(hasClass) {
       header?.classList.add("border-b-2");
       return;
