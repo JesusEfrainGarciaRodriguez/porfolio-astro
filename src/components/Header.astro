@@ -1,11 +1,12 @@
 ---
 import { t } from "i18next";
 import { LanguageSelector } from "astro-i18next/components";
+import ThemeModeButton from "./ThemeModeButton.astro";
 ---
 
 <header
   id="header"
-  class="py-5 w-full fixed z-50 bg-[#000814] border-blue-900 transition-[border] ease-in"
+  class="py-5 w-full fixed z-50 bg-white dark:bg-dark text-black dark:text-white border-blue-900 transition-[border] ease-in"
 >
   <nav
     class="xl:w-[1000px] mx-auto flex flex-row justify-center sm:justify-normal flex-wrap gap-x-10 gap-y-2 px-5 sm:px-0 font-semibold"
@@ -34,6 +35,7 @@ import { LanguageSelector } from "astro-i18next/components";
       class="hover:text-[#ffc300]/90 transition">{t("header.navbar.aboutMe")}</a
     >
     <LanguageSelector />
+    <ThemeModeButton />
   </nav>
 </header>
 

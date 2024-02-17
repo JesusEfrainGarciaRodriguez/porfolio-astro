@@ -11,14 +11,14 @@ import { t } from "i18next";
 ---
 
 <article class="sm:w-2/4">
-  <h6 class="text-white pb-2 text-xl font-bold">{t("hero.hiIam")}</h6>
+  <h6 class="text-black dark:text-white pb-2 text-xl font-bold">{t("hero.hiIam")}</h6>
   <h1
-    class="text-white text-3xl lg:text-5xl font-bold flex flex-col flex-wrap pb-3"
+    class="text-black dark:text-white text-3xl lg:text-5xl font-bold flex flex-col flex-wrap pb-3"
   >
     <span class="text-[#ffc300]/90 mb-1 sm:mb-4">{t("hero.name")}</span>
     <span>{t("hero.position")}</span>
   </h1>
-  <h2 class="text-lg lg:text-xl opacity-80 max-w-[500px] text-balance">
+  <h2 class="text-black dark:text-white text-lg lg:text-xl opacity-90 dark:opacity-80 max-w-[500px] text-balance">
     {t("hero.description")}
   </h2>
 
@@ -28,7 +28,7 @@ import { t } from "i18next";
         href="https://www.linkedin.com/in/efrain-garcia-6a081197/"
         aria-label="LinkedIn"
       >
-        <LinkedInIcon class="size-6 hover:scale-110" />
+        <LinkedInIcon class="text-black dark:text-white size-6 hover:scale-110" />
       </SocialLink>
     </li>
     <li>
@@ -36,17 +36,17 @@ import { t } from "i18next";
         href="https://github.com/JesusEfrainGarciaRodriguez"
         aria-label="Github"
       >
-        <GitHubIcon class="size-6 hover:scale-110" />
+        <GitHubIcon class="text-black dark:text-white size-6 hover:scale-110" />
       </SocialLink>
     </li>
     <li>
       <SocialLink href="mailto:efraingarcia_86@hotmail.com" aria-label={t("hero.mail")}>
-        <MailIcon class="size-6 hover:scale-110" />
+        <MailIcon class="text-black dark:text-white size-6 hover:scale-110" />
       </SocialLink>
     </li>
     <li>
       <SocialLink href="tel:6694415732" aria-label={t("hero.phone")}>
-        <PhoneIcon class="size-6 hover:scale-110" />
+        <PhoneIcon class="text-black dark:text-white size-6 hover:scale-110" />
       </SocialLink>
     </li>
     <li>
@@ -54,14 +54,14 @@ import { t } from "i18next";
         href="https://drive.google.com/file/d/1O2huJkdzIz1-rd_BaXXUTynWFQ6XGDnC/view?usp=sharing"
         aria-label={t("hero.downloadCV")}
       >
-        <CvIcon class="size-6 hover:scale-110" />
+        <CvIcon class="text-black dark:text-white size-6 hover:scale-110" />
       </SocialLink>
     </li>
   </ul>
 </article>
 
 <div
-  class="sm:w-2/4 flex justify-center items-center relative after:content-[''] after:left-0 after:right-0 after:h-full after:absolute after:bg-gradient-border"
+  class="sm:w-2/4 flex justify-center items-center relative after:content-[''] after:left-0 after:right-0 after:h-full after:absolute after:bg-gradient-border dark:after:bg-gradient-border-dark"
 >
   <Image
     src={imageHero}
