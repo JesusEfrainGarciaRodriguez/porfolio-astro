@@ -2,14 +2,18 @@
 import { t } from "i18next";
 import { LanguageSelector } from "astro-i18next/components";
 import ThemeModeButton from "./ThemeModeButton.astro";
+import HamburgerIcon from "./icons/Hamburger.astro";
 ---
 
 <header
   id="header"
-  class="py-5 w-full fixed z-50 bg-pattern bg-white dark:bg-none dark:bg-dark text-black dark:text-white border-blue-900 transition-[border] ease-in"
+  class="py-4 sm:py-5 w-full fixed z-50 bg-pattern bg-white dark:bg-none dark:bg-dark text-black dark:text-white border-blue-900 transition-[border] ease-in"
 >
+  <button id="hamburger-button" class="sm:hidden w-full px-4 flex items-center"
+    ><HamburgerIcon class="size-8" /></button
+  >
   <nav
-    class="xl:w-[1000px] mx-auto flex flex-row justify-center sm:justify-normal flex-wrap gap-x-10 gap-y-2 px-5 sm:px-0 font-semibold"
+    class="xl:w-[1000px] mx-auto flex flex-col sm:flex-row items-center justify-center sm:justify-normal flex-nowrap gap-x-10 gap-y-4 sm:gap-y-2 px-5 sm:px-0 font-semibold max-h-0 overflow-hidden sm:max-h-full transition-all"
   >
     <a
       href=`#${t("header.navbar.homeLink")}`
@@ -34,18 +38,36 @@ import ThemeModeButton from "./ThemeModeButton.astro";
       href=`#${t("header.navbar.aboutMeLink")}`
       class="hover:text-[#ffc300]/90 transition">{t("header.navbar.aboutMe")}</a
     >
-    <LanguageSelector />
     <ThemeModeButton />
+    <LanguageSelector class="border-2 rounded-lg text-white bg-dark px-1" />
   </nav>
 </header>
 
 <script>
   const header = document.getElementById("header");
+  const nav = header?.querySelector("nav");
 
   window.addEventListener("scroll", function () {
+    const navMobileOpen = nav?.classList.contains("max-h-[230px]");
+    if(navMobileOpen) return;
+    
     const scrollPosition = document.documentElement.scrollTop;
     scrollPosition > 0
       ? header?.classList.add("border-b-2")
       : header?.classList.remove("border-b-2");
+  });
+
+  const hamburgerButton = document.getElementById("hamburger-button");
+  hamburgerButton?.addEventListener("click", () => {
+    const hasClass = nav?.classList.toggle("max-h-[230px]");
+    if(hasClass) {
+      header?.classList.add("border-b-2");
+      return;
+    }
+
+    const scrollPosition = document.documentElement.scrollTop;
+    if(scrollPosition === 0) {
+      header?.classList.remove("border-b-2");
+    }
   });
 </script>

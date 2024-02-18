@@ -14,6 +14,9 @@ export default {
       colors: {
         dark: "#000814",
       },
+      colors: {
+        "dark": "#000814"
+      }
     },
   },
   plugins: [],
