@@ -12,10 +12,10 @@ export default {
         "pattern": "url('./src/assets/so-white.png')",
       },
       colors: {
-        dark: "#000814",
-      },
-      colors: {
-        "dark": "#000814"
+        "dark": "#000814",
+        "dark-primary": "rgb(255 195 0 / 0.9)",
+        "light-primary": "#FFAF38",
+        "light-blue": "#05BDFF"
       }
     },
   },
