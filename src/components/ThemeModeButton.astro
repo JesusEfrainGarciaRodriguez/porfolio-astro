@@ -1,23 +1,16 @@
+---
+import MoonIcon from "./icons/Moon.astro";
+import SunIcon from "./icons/Sun.astro";
+---
+
 <script>
-  // On page load or when changing themes, best to add inline in `head` to avoid FOUC
   if (
-    localStorage.theme === "dark" ||
-    (!("theme" in localStorage) &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches)
+    localStorage.theme === "light"
   ) {
-    document.documentElement.classList.add("dark");
-  } else {
     document.documentElement.classList.remove("dark");
+  } else {
+    document.documentElement.classList.add("dark");
   }
-
-  // Whenever the user explicitly chooses light mode
-  //localStorage.theme = 'light'
-
-  // Whenever the user explicitly chooses dark mode
-  //localStorage.theme = 'dark'
-
-  // Whenever the user explicitly chooses to respect the OS preference
-  //localStorage.removeItem('theme')
 
   const handleChangeTheme = () => {
     const toggleDarkMode = document.documentElement.classList.toggle("dark");
@@ -32,4 +25,12 @@
   });
 </script>
 
-<button id="theme-toggle">switch</button>
+<div class="flex justify-center items-center dark:bg-dark">
+  <button
+    id="theme-toggle"
+    class="size-6 rounded-lg p-0.5 hover:bg-gray-100 dark:hover:bg-gray-700 flex justify-center items-center dark:bg-dark"
+  >
+    <MoonIcon class="fill-violet-700 block dark:hidden" />
+    <SunIcon class="fill-yellow-500 hidden dark:block" />
+  </button>
+</div>

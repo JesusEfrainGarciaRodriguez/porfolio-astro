@@ -9,47 +9,59 @@ import HamburgerIcon from "./icons/Hamburger.astro";
   id="header"
   class="py-4 sm:py-5 w-full fixed z-50 bg-pattern bg-white dark:bg-none dark:bg-dark text-black dark:text-white border-sky-500 dark:border-blue-900 transition-[border] ease-in"
 >
-  <button id="hamburger-button" class="sm:hidden w-full px-4 flex items-center"
-    ><HamburgerIcon class="size-8" /></button
-  >
   <nav
-    class="xl:w-[1000px] mx-auto flex flex-col sm:flex-row items-center justify-center sm:justify-normal flex-nowrap gap-x-10 gap-y-4 sm:gap-y-2 px-5 sm:px-0 font-semibold max-h-0 overflow-hidden sm:max-h-full transition-all"
+    class="flex justify-between flex-wrap lg:flex-row-reverse lg:w-[1000px] mx-auto"
   >
-    <a
-      href=`#${t("header.navbar.homeLink")}`
-      class="hover:text-light-primary dark:hover:text-dark-primary transition"
-      >{t("header.navbar.home")}</a
+    <button
+      id="hamburger-button"
+      class="lg:hidden w-1/2 lg:w-auto pl-4 flex items-center"
+      ><HamburgerIcon class="size-8" /></button
     >
-    <a
-      href=`#${t("header.navbar.experienceLink")}`
-      class="hover:text-light-primary dark:hover:text-dark-primary transition"
-      >{t("header.navbar.experience")}</a
+    <div
+      class="flex justify-end gap-x-5 pr-4 lg:pr-0 lg:gap-x-8 w-1/2 lg:w-auto"
     >
-    <a
-      href=`#${t("header.navbar.projectsLink")}`
-      class="hover:text-light-primary dark:hover:text-dark-primary transition"
-      >{t("header.navbar.projects")}</a
+      <ThemeModeButton />
+      <LanguageSelector
+        class="border-2 border-black dark:border-white rounded-lg text-black dark:text-white bg-white bg-pattern dark:bg-none dark:bg-dark px-1"
+      />
+    </div>
+
+    <div
+      id="navbar-default"
+      class="flex flex-col lg:flex-row items-center w-full lg:w-auto justify-center lg:justify-normal flex-nowrap gap-x-10 gap-y-4 lg:gap-y-2 px-5 lg:px-0 font-semibold max-h-0 overflow-hidden lg:max-h-full transition-all"
     >
-    <a
-      href=`#${t("header.navbar.certificationsLink")}`
-      class="hover:text-light-primary dark:hover:text-dark-primary transition"
-      >{t("header.navbar.certifications")}</a
-    >
-    <a
-      href=`#${t("header.navbar.aboutMeLink")}`
-      class="hover:text-light-primary dark:hover:text-dark-primary transition"
-      >{t("header.navbar.aboutMe")}</a
-    >
-    <ThemeModeButton />
-    <LanguageSelector
-      class="border-2 border-black dark:border-white rounded-lg text-black dark:text-white bg-white bg-pattern dark:bg-none dark:bg-dark px-1"
-    />
+      <a
+        href=`#${t("header.navbar.homeLink")}`
+        class="hover:text-light-primary dark:hover:text-dark-primary transition"
+        >{t("header.navbar.home")}</a
+      >
+      <a
+        href=`#${t("header.navbar.experienceLink")}`
+        class="hover:text-light-primary dark:hover:text-dark-primary transition"
+        >{t("header.navbar.experience")}</a
+      >
+      <a
+        href=`#${t("header.navbar.projectsLink")}`
+        class="hover:text-light-primary dark:hover:text-dark-primary transition"
+        >{t("header.navbar.projects")}</a
+      >
+      <a
+        href=`#${t("header.navbar.certificationsLink")}`
+        class="hover:text-light-primary dark:hover:text-dark-primary transition"
+        >{t("header.navbar.certifications")}</a
+      >
+      <a
+        href=`#${t("header.navbar.aboutMeLink")}`
+        class="hover:text-light-primary dark:hover:text-dark-primary transition"
+        >{t("header.navbar.aboutMe")}</a
+      >
+    </div>
   </nav>
 </header>
 
 <script>
   const header = document.getElementById("header");
-  const nav = header?.querySelector("nav");
+  const nav = header?.querySelector("#navbar-default");
 
   window.addEventListener("scroll", function () {
     const navMobileOpen = nav?.classList.contains("max-h-[230px]");
