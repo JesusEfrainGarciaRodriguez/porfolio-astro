@@ -1,11 +1,11 @@
 ---
 const { variant, class: classProp, href } = Astro.props;
 let classVariant =
-  "inline-block rounded-lg px-2 py-1 bg-white border-2 text-black font-semibold transition hover:bg-[#ffc300]/90 hover:text-white cursor-pointer";
+  "inline-block rounded-lg px-2 py-1 text-white hover:text-black dark:text-black dark:hover:text-white bg-black dark:bg-white border-2 border-black dark:border-white font-semibold transition hover:bg-light-primary dark:hover:bg-dark-primary cursor-pointer";
 
 if (variant === "secondary") {
   classVariant =
-    "inline-block rounded-lg px-2 py-1 border-2 border-white bg-[#000814] transition hover:border-[#ffc300]/90 hover:text-[#ffc300]/90 cursor-pointer";
+    "inline-block rounded-lg px-2 py-1 font-semibold text-black dark:text-white border-2 border-black dark:border-white bg-white bg-pattern dark:bg-none dark:bg-dark transition hover:border-light-primary dark:hover:border-dark-primary hover:text-light-primary dark:hover:text-dark-primary cursor-pointer";
 }
 ---
 

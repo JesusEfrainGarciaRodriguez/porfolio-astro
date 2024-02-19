@@ -16,7 +16,7 @@ const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang={i18next.language}>
+<html lang={i18next.language} class="transition-colors">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -43,10 +43,13 @@ const { title, description } = Astro.props;
   }
 
   body {
-    background: #000814;;
+    background: url("../assets/so-white.png") repeat #fff;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+  }
+  .dark body {
+    background: #000814;
   }
 
   /* Desactivar animación */

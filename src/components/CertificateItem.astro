@@ -14,7 +14,7 @@ const { img, title, date, url } = Astro.props;
   href={url}
   target="_blank"
   rel="noopener noreferrer"
-  class="flex justify-between items-center flex-col sm:flex-row gap-2 p-3 border-2 border-blue-900 rounded-lg transition hover:border-[#ffc300]/90 cursor-pointer"
+  class="flex justify-between items-center flex-col sm:flex-row gap-2 p-3 border-2 border-sky-500 dark:border-blue-900 rounded-lg transition hover:border-light-primary dark:hover:border-dark-primary cursor-pointer"
 >
   <div class="flex gap-5 flex-col sm:flex-row items-center">
     <Image
@@ -23,9 +23,9 @@ const { img, title, date, url } = Astro.props;
       class="size-16 object-cover"
     />
     <div class="flex flex-col">
-      <h3 class="text-lg font-bold text-[#ffc300]/90">{title}</h3>
-      <time class="text-base font-normal opacity-80">{date}</time>
+      <h3 class="text-lg font-bold text-light-primary dark:text-dark-primary">{title}</h3>
+      <time class="text-base font-normal opacity-80 text-black dark:text-white">{date}</time>
     </div>
   </div>
-  <ExternalLinkIcon class="size-6" />
+  <ExternalLinkIcon class="size-6 text-black dark:text-white" />
 </a>
