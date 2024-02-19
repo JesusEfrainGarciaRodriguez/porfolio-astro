@@ -2,8 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import BriefcaseIcon from "../components/icons/Briefcase.astro";
-import FileCodeIcon from "../components/icons/FileCode.astro";
+import CodeIcon from "../components/icons/Code.astro";
 import CertificateIcon from "../components/icons/Certificate.astro";
+import MeIcon from "../components/icons/Me.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Title from "../components/Title.astro";
@@ -34,7 +35,7 @@ changeLanguage("es");
 
     <SectionContainer id={t("header.navbar.projectsLink")}>
       <Title>
-        <FileCodeIcon class="size-6" />
+        <CodeIcon class="size-6" />
         {t("projects.title")}
       </Title>
       <Projects />
@@ -50,7 +51,7 @@ changeLanguage("es");
 
     <SectionContainer id={t("header.navbar.aboutMeLink")}>
       <Title>
-        <CertificateIcon class="size-6" />
+        <MeIcon class="size-6" />
         {t("aboutMe.title")}
       </Title>
       <AboutMe />
